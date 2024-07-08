@@ -1,0 +1,158 @@
+.root{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.registro{
+    display: flex;
+    width: 100%;
+    height: 6rem;
+    justify-content: end;
+    padding: 1rem;
+}
+.main{
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    width: 100%;
+    height: 15rem;
+}
+.agregar{
+    background-color: rgb(33, 119, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    color: white;
+    border-radius: 5px;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 2rem;
+}
+.agregar:hover{
+    cursor: pointer;
+    background-color:rgb(0, 60, 255) ;
+}
+.us{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.tareas{
+    background-color: white;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tareas h1{
+    font-size: 4rem;
+}
+.mas{
+    background-color: rgb(226, 226, 226);
+    font-size: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.mas:hover{
+    cursor: pointer;
+    background-color: rgb(202, 202, 202);
+}
+.asignaciones{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.asig{
+    background-color: white;
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    align-items: center;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    background-image: url("https://github.com/gODHyDRaX/img/blob/main/user.png?raw=true");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.info_us{
+    width: 80%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.info_us h1{
+    font-size: 2.5rem;
+}
+.info_us span{
+    font-size: 1.5rem;
+}
+.ventana{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vtn_registro{
+    background-color: white;
+    width: 60rem;
+    height: 40rem;
+    display: grid;
+    grid-template-rows: 10rem 4rem 4rem 4rem 4rem 4rem;
+    padding: 1rem;
+        border-radius: 15px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        gap: 1.5rem;
+}
+.vtn_registro h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 300;
+}
+.btn1{
+    background-color: rgb(33, 119, 248);
+    border-radius: 5px;
+    align-items: center;
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    color: white;
+}
+.btn1:hover{
+    cursor: pointer;
+        background-color: rgb(0, 60, 255);
+}
+.vtn_registro h2{
+    display: flex;
+    font-weight: 300;
+    align-items: flex-end;
+    font-size:2rem;
+}
