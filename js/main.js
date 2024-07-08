@@ -36,24 +36,59 @@ function agregarUsuario(nombre, correo) {
     let usuario = document.createElement("div");
     usuario.classList.add("main");
     usuario.innerHTML = `
-       
-    <div class="us">
-        <div class="img"></div>
-        <div class="info_us">
-            <h1>${nombre}</h1>
-            <span>${correo}</span>
+        <div class="us">
+            <div class="img"></div>
+            <div class="info_us">
+                <h1>${nombre}</h1>
+                <span>${correo}</span>
+            </div>
         </div>
-    </div>
-    <div class="tareas">
-        <h1>3</h1>
-        <div class="mas">+</div>
-        <div class="asignaciones">
-            <div class="asig">1 asignacion</div>
-            <div class="asig">2 asignacion</div>
-            <div class="asig">3 asignacion</div>
+        <div class="tareas">
+            <h1 class="contador">0</h1>
+            <div class="mas">+</div>
+            <div class="asignaciones"></div>
         </div>
-    </div>
     `;
 
     usuarios.appendChild(usuario);
+
+    // Añadir el evento para el botón "más"
+    let mas = usuario.querySelector(".mas");
+    mas.addEventListener("click", () => mostrarModalAsignacion(usuario));
+}
+
+function mostrarModalAsignacion(usuario) {
+    let modalAsignacion = document.createElement("div");
+    modalAsignacion.classList.add("ventana");
+    modalAsignacion.innerHTML = `
+        <div class="vtn_asignacion">
+            <h1>Agregar Asignación</h1>
+            <h2>Descripción: </h2>
+            <input type="text" class="descripcion">
+            <div class="btn1">Agregar</div>
+        </div>
+    `;
+    root.appendChild(modalAsignacion);
+
+    let btn1 = modalAsignacion.querySelector(".btn1");
+    btn1.addEventListener("click", () => {
+        let descripcion = modalAsignacion.querySelector(".descripcion").value;
+        agregarAsignacion(usuario, descripcion);
+
+        root.removeChild(modalAsignacion);
+    });
+}
+
+function agregarAsignacion(usuario, descripcion) {
+    let asignaciones = usuario.querySelector(".asignaciones");
+
+    let nuevaAsignacion = document.createElement("div");
+    nuevaAsignacion.classList.add("asig");
+    nuevaAsignacion.textContent = descripcion;
+
+    asignaciones.appendChild(nuevaAsignacion);
+
+    // Actualizar el contador
+    let contador = usuario.querySelector(".contador");
+    contador.textContent = asignaciones.children.length;
 }
