@@ -31,7 +31,7 @@
     border-radius: 5px;
     height: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    font-size: 2rem;
+    font-size:1.5rem;
 }
 .agregar:hover{
     cursor: pointer;
